@@ -1,5 +1,7 @@
 package dev.lpa;
 
+import jdk.jshell.execution.LoaderDelegate;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -33,10 +35,14 @@ public class AdventureGame {
     private Map<String, Location> adventureMap = new HashMap<>();
 
     public AdventureGame() {
+        this(null);
     }
 
     public AdventureGame(String customLocations) {
-
+        loadLocations(GAME_LOCATIONS);
+        if (customLocations != null) {
+            loadLocations(customLocations);
+        }
     }
 
     private void loadLocations(String data) {
@@ -48,7 +54,7 @@ public class AdventureGame {
             Location location = new Location(parts[1], nextPlaces);
             adventureMap.put(parts[0], location);
         }
-        adventureMap.forEach((k, v) -> System.out.printf("%s:%s%n", k, v));
+//        adventureMap.forEach((k, v) -> System.out.printf("%s:%s%n", k, v));
     }
 
     private Map<Compass, String> loadDirections(String nextPlaces) {
@@ -64,5 +70,42 @@ public class AdventureGame {
             directions.put(compass, destination);
         }
         return directions;
+    }
+
+    private void visit(Location location) {
+
+        System.out.printf("*** You're standing %s *** %n", location.description);
+        System.out.println("\tFrom here, you can see:");
+
+        location.nextPlaces.forEach((k, v) -> {
+            System.out.printf("\t. A %s to the %s (%S) %n", v, k.getString(), k);
+        });
+
+        System.out.print("Select Your Compass (Q to quit) >> ");
+    }
+
+    public void move(String directions) {
+
+        var nextPlaces = adventureMap.get(lastPlace).nextPlaces;
+        String nextPlace = null;
+        if("ENSW".contains(directions) ) {
+            nextPlace = nextPlaces.get(Compass.valueOf(directions));
+            if (nextPlace != null) {
+                play(nextPlace);
+            }
+        } else {
+            System.out.println("!! Invalid direction, try again!!");
+        }
+    }
+
+    public void play(String location) {
+
+        if (adventureMap.containsKey(location)) {
+            Location next = adventureMap.get(location);
+            lastPlace = location;
+            visit(next);
+        } else {
+            System.out.println(location + " is an invalid location");
+        }
     }
 }
