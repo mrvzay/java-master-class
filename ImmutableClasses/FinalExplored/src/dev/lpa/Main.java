@@ -4,8 +4,6 @@ import consumer.specific.ChildClass;
 import dev.lpa.generic.BaseClass;
 import external.util.Logger;
 
-import javax.crypto.CipherInputStream;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -39,9 +37,10 @@ public class Main {
 
         StringBuilder tracker = new StringBuilder("Step 1 is abc");
         Logger.logToConsole(tracker.toString());
-        tracker.append(", Step 2 is xyz.");
+        tracker.append(", Step 2 is xzy.");
         Logger.logToConsole(tracker.toString());
-        System.out.println("After logging, tracker = " + tracker);
+        System.out.println("After logging, tracker = " + tracker
+        );
     }
 
     private static void doXYZ(String x, int y, final StringBuilder z) {

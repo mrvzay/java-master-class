@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b939ac60-ad33-44f1-a0b4-a6f9bc0ca946" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/dev/bank/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dev/dto/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Streams/Streamss/src/dev/lpa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CopyingClasses/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CopyingClasses/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CopyingClasses/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CopyingClasses/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CopyingClasses/src/dev/lpa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExplored/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/src/consumer/specific/ChildClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExplored/src/consumer/specific/ChildClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExplored/src/dev/lpa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/src/dev/lpa/MainMailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExplored/src/dev/lpa/MainMailer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/src/dev/lpa/generic/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExplored/src/dev/lpa/generic/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExplored/src/external/util/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExplored/src/external/util/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/bank/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/bank/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/bank/BankCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/bank/BankCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/lpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/lpa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/ImmutableClasses.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/external/LivingPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/external/MainImmutable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/hacker/PersonOfInterest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/lpa/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/lpa/MainRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/lpa/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/lpa/PersonImmutable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ImmutableClasses/src/dev/lpa/PersonRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/UnmodifiableCollections.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/src/dev/lpa/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnmodifiableCollections/src/dev/lpa/Student.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2WpWrxp7yuzVuzCfulRujH4XspA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b939ac60-ad33-44f1-a0b4-a6f9bc0ca946" name="Changes" comment="" />
+      <created>1697430209358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697430209358</updated>
+    </task>
+    <servers />
+  </component>
+</project>

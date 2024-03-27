@@ -23,7 +23,8 @@ public class ChildClass extends BaseClass {
     }
 
     public static void recommendedStatic() {
-        System.out.println("[Child.BaseClass.recommendedStatic] BEST Way to Do it");
+
+        System.out.println("[Child:recommendedStatic] BEST Way to Do it");
         optionalStatic();
 //        mandatoryStatic();
     }

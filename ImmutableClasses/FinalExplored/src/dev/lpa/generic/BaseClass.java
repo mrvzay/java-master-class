@@ -18,7 +18,8 @@ public class BaseClass {
     }
 
     public static void recommendedStatic() {
-        System.out.println("[BaseClass.recommendedStatic] BEST Way to Do it");
+
+        System.out.println("[BaseClass.optionalStatic]: BEST Way to Do it");
         optionalStatic();
         mandatoryStatic();
     }
