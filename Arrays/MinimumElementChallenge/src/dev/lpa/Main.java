@@ -22,7 +22,7 @@ public class Main {
     private static int[] readIntegers() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a list a integers, separated by commas:");
+        System.out.print("Enter a list a integers, separated by commas:");
         String input = scanner.nextLine();
 
         String[] splits = input.split(",");
@@ -56,7 +56,7 @@ public class Main {
             int temp = array[i];
             array[i] = array[maxIndex - i];
             array[maxIndex - i] = temp;
-            System.out.print("----->" + Arrays.toString(array));
+            System.out.println("----->" + Arrays.toString(array));
         }
     }
 }
