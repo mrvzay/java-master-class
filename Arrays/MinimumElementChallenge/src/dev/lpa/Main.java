@@ -55,8 +55,8 @@ public class Main {
         for (int i = 0; i < halfLength; i++) {
             int temp = array[i];
             array[i] = array[maxIndex - i];
-            array[maxIndex - 1] = temp;
-            System.out.println("----->" + Arrays.toString(array));
+            array[maxIndex - i] = temp;
+            System.out.print("----->" + Arrays.toString(array));
         }
     }
 }
