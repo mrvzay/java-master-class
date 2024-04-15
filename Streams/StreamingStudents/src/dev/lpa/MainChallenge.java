@@ -8,8 +8,8 @@ public class MainChallenge {
 
     public static void main(String[] args) {
 
-        Course pymc = new Course("PYMC", "Python MasterClass", 50);
-        Course jmc = new Course("JMC", "Java MasterClass", 100);
+        Course pymc= new Course("PYMC", "Python Masterclass", 50);
+        Course jmc= new Course("JMC", "Java Masterclass", 100);
         Course jgames = new Course("JGAME", "Creating games in Java");
 
         List<Student> students = IntStream
@@ -25,10 +25,10 @@ public class MainChallenge {
         System.out.printf("Average Percentage Complete = %.2f%% %n", avePercent);
 
         int topPercent = (int) (1.25 * avePercent);
-        System.out.printf("Best Percentage Complete = %d%% %n ", topPercent);
+        System.out.printf("Best Percentage Complete = %d%% %n", topPercent);
 
-        Comparator<Student> longTermStudent =
-                Comparator.comparing(Student::getYearEnrolled);
+        Comparator<Student> longTermStudent
+                = Comparator.comparing(Student::getYearEnrolled);
 
         List<Student> hardWorkers = students.stream()
                 .filter(s -> s.getMonthsSinceActive("JMC") == 0)
@@ -52,16 +52,15 @@ public class MainChallenge {
                 .filter(s -> s.getPercentComplete("JMC") >= topPercent)
                 .sorted(longTermStudent)
                 .limit(10)
-                // Four different types collected ways
 //                .toList()
 //                .collect(Collectors.toList())
 //                .collect(Collectors.toSet())
 //                .collect(() -> new TreeSet<>(uniqueSorted),
-//                        TreeSet::add, TreeSet::addAll)
+//                    TreeSet::add, TreeSet::addAll)
                 .forEach(s -> {
-                    s.addCourse(jgames);
-                    System.out.print(s.getStudentId() + " ");
-                });
+                s.addCourse(jgames);
+                System.out.print(s.getStudentId() + " ");
+            });
 
     }
 }

@@ -11,8 +11,8 @@ public class MainCollect {
 
     public static void main(String[] args) {
 
-        Course pymc = new Course("PYMC", "Python MasterClass");
-        Course jmc = new Course("JMC", "Java MasterClass");
+        Course pymc= new Course("PYMC", "Python Masterclass");
+        Course jmc= new Course("JMC", "Java Masterclass");
 
         List<Student> students =
                 Stream.generate(() -> Student.getRandomStudent(jmc, pymc))
@@ -27,7 +27,7 @@ public class MainCollect {
         Set<Student> underThirty = students.stream()
                 .filter((s) -> s.getAgeEnrolled() < 30)
                 .collect(Collectors.toSet());
-        System.out.println("# to Under Thirty Students = " + underThirty.size());
+        System.out.println("# of Under Thirty Students = " + underThirty.size());
 
         Set<Student> youngAussies1 = new TreeSet<>(Comparator.comparing(
                 Student::getStudentId));
@@ -51,5 +51,6 @@ public class MainCollect {
                 .sorted()
                 .reduce("", (r, v) -> r + " " + v);
         System.out.println("countryList = " + countryList);
+
     }
 }

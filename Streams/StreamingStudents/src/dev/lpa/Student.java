@@ -7,12 +7,14 @@ public class Student {
 
     private static long lastStudentId = 1;
     private final static Random random = new Random();
+
     private final long studentId;
     private final String countryCode;
     private final int yearEnrolled;
     private final int ageEnrolled;
     private final String gender;
     private final boolean programmingExperience;
+
     private final Map<String, CourseEngagement> engagementMap = new HashMap<>();
 
     public Student(String countryCode, int yearEnrolled, int ageEnrolled, String gender,
@@ -78,12 +80,12 @@ public class Student {
     public int getMonthsSinceActive(String courseCode) {
 
         CourseEngagement info = engagementMap.get(courseCode);
-        return info == null ? 0 : info.getMonthSinceActive();
+        return info == null ? 0 : info.getMonthsSinceActive();
     }
 
     public int getMonthsSinceActive() {
 
-        int inactiveMonths = (LocalDate.now().getYear() - 2024) * 12;
+        int inactiveMonths = (LocalDate.now().getYear() - 2014) * 12;
         for (String key : engagementMap.keySet()) {
             inactiveMonths = Math.min(inactiveMonths, getMonthsSinceActive(key));
         }
@@ -108,7 +110,6 @@ public class Student {
         return data[random.nextInt(data.length)];
     }
 
-    // last lecture method
     private static Course[] getRandomSelection(Course... courses) {
 
         int courseCount = random.nextInt(1, courses.length + 1);
@@ -121,7 +122,7 @@ public class Student {
     public static Student getRandomStudent(Course... courses) {
 
         int maxYear = LocalDate.now().getYear() + 1;
-        Course[] randomCourses = getRandomSelection(courses); // last challenge lecture method write line
+        Course[] randomCourses = getRandomSelection(courses);
 
         Student student = new Student(
                 getRandomVal("AU", "CA", "CN", "GB", "IN", "UA", "US"),
@@ -129,11 +130,10 @@ public class Student {
                 random.nextInt(18, 90),
                 getRandomVal("M", "F", "U"),
                 random.nextBoolean(),
-                randomCourses // course ---> to randomCourse last lecture change
-        );
+                randomCourses);
 
-        for (Course c : randomCourses) { // above line some comment
-            int lecture = random.nextInt(30, c.lectureCount()); // main challenge lecture need to change 1 to 30
+        for (Course c : randomCourses) {
+            int lecture = random.nextInt(30, c.lectureCount());
             int year = random.nextInt(student.getYearEnrolled(), maxYear);
             int month = random.nextInt(1, 13);
             if (year == (maxYear - 1)) {

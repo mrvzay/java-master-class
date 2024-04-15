@@ -9,8 +9,8 @@ public class MainFinalChallenge {
 
     public static void main(String[] args) {
 
-        Course pymc = new Course("PYMC", "Python MasterClass", 50);
-        Course jmc = new Course("JMC", "Java MasterClass", 100);
+        Course pymc= new Course("PYMC", "Python Masterclass", 50);
+        Course jmc= new Course("JMC", "Java Masterclass", 100);
         Course jgames = new Course("JGAME", "Creating games in Java");
 
         int currentYear = LocalDate.now().getYear();
@@ -29,7 +29,7 @@ public class MainFinalChallenge {
 
         System.out.println(students
                 .stream()
-                .mapToInt(s -> s.getEngagementMap().size())
+                .mapToInt(s ->s.getEngagementMap().size())
                 .summaryStatistics());
 
         var mappedActivity = students.stream()
@@ -64,7 +64,7 @@ public class MainFinalChallenge {
                 .flatMap(s -> s.getEngagementMap().values().stream())
                 .collect(Collectors.groupingBy(CourseEngagement::getEnrollmentYear,
                         Collectors.groupingBy(CourseEngagement::getCourseCode,
-                                Collectors.counting())))
+                        Collectors.counting())))
                 .forEach((k, v) -> System.out.println(k + ": " + v));
 
     }

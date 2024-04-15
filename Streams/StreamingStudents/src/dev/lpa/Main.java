@@ -10,8 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Course pymc = new Course("PYMC", "Python MasterClass");
-        Course jmc = new Course("JMC", "Java MasterClass");
+        Course pymc= new Course("PYMC", "Python Masterclass");
+        Course jmc= new Course("JMC", "Java Masterclass");
 //        Student tim = new Student("AU", 2019, 30, "M",
 //                true, jmc, pymc);
 //        System.out.println(tim);
@@ -27,14 +27,8 @@ public class Main {
         Student[] students = new Student[1000];
         Arrays.setAll(students, (i) -> Student.getRandomStudent(jmc, pymc));
 
-//        var maleStudents = Stream.generate(
-//                        () -> Student.getRandomStudent(jmc, pymc))
-//                .limit(1000);
-//
-//        maleStudents = maleStudents.filter(s -> s.getGender().equals("M"));
-        // --------------   up and blow code same --------------
         var maleStudents = Arrays.stream(students)
-                .filter(s -> s.getGender().equals("M"));
+                        .filter(s -> s.getGender().equals("M"));
 
         System.out.println("# of male students " + maleStudents.count());
 
@@ -46,7 +40,7 @@ public class Main {
 
         List<Predicate<Student>> list = List.of(
                 (s) -> s.getAge() < 30,
-                (Student s) -> s.getAge() >= 30 && s.getAge() > 60
+                (Student s) -> s.getAge() >= 30 && s.getAge() < 60
         );
 
         long total = 0;
@@ -59,13 +53,14 @@ public class Main {
         }
         System.out.println("# of students >= 60 = " + (students.length - total));
 
-        var ageStream = Arrays.stream(students)
-                .mapToInt(Student::getAgeEnrolled);
+        var ageStream = Arrays.stream(students).
+                mapToInt(Student::getAgeEnrolled);
         System.out.println("Stats for Enrollment Age = " + ageStream.summaryStatistics());
 
-        var currentAgeStream = Arrays.stream(students)
-                .mapToInt(Student::getAgeEnrolled);
-        System.out.println("Stats for Current Age = " + currentAgeStream.summaryStatistics());
+        var currentAgeStream = Arrays.stream(students).
+                mapToInt(Student::getAge);
+        System.out.println("Stats for Current Age = " +
+                currentAgeStream.summaryStatistics());
 
         Arrays.stream(students)
                 .map(Student::getCountryCode)

@@ -11,7 +11,8 @@ public class CourseEngagement {
     private int lastLecture;
     private LocalDate lastActivityDate;
 
-    public CourseEngagement(Course course, LocalDate enrollmentDate, String engagementType) {
+    public CourseEngagement(Course course, LocalDate enrollmentDate,
+                            String engagementType) {
         this.course = course;
         this.enrollmentDate = this.lastActivityDate = enrollmentDate;
         this.engagementType = engagementType;
@@ -45,8 +46,8 @@ public class CourseEngagement {
         return lastLecture * 100.0 / course.lectureCount();
     }
 
-    public int getMonthSinceActive() {
-        
+    public int getMonthsSinceActive() {
+
         LocalDate now = LocalDate.now();
         var months = Period.between(lastActivityDate, now).toTotalMonths();
         return (int) months;
@@ -63,6 +64,6 @@ public class CourseEngagement {
     public String toString() {
         return "%s: %s %d %s [%d]".formatted(course.courseCode(),
                 getLastActivityMonth(), getLastActivityYear(), engagementType,
-                getMonthSinceActive());
+                getMonthsSinceActive());
     }
 }

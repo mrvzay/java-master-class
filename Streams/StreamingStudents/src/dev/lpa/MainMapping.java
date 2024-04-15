@@ -3,15 +3,14 @@ package dev.lpa;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
 import static java.util.stream.Collectors.*;
 
 public class MainMapping {
 
     public static void main(String[] args) {
 
-        Course pymc = new Course("PYMC", "Python MasterClass", 50);
-        Course jmc = new Course("JMC", "Java MasterClass", 100);
+        Course pymc= new Course("PYMC", "Python Masterclass", 50);
+        Course jmc= new Course("JMC", "Java Masterclass", 100);
         Course jgames = new Course("JGAME", "Creating games in Java");
 
         List<Student> students = IntStream
@@ -24,11 +23,11 @@ public class MainMapping {
 
         mappedStudents.forEach((k, v) -> System.out.println(k + " " + v.size()));
 
-        System.out.println("-----------------------------");
+        System.out.println("-----------------------");
         int minAge = 25;
         var youngerSet = students.stream()
                 .collect(groupingBy(Student::getCountryCode,
-                        filtering(s -> s.getAge() <= minAge, toList())));
+                        filtering(s -> s.getAge() <= minAge , toList())));
 
         youngerSet.forEach((k, v) -> System.out.println(k + " " + v.size()));
 
@@ -43,7 +42,7 @@ public class MainMapping {
         var experiencedAndActive = students.stream()
                 .collect(partitioningBy(
                         s -> s.hasProgrammingExperience()
-                                && s.getMonthsSinceActive() == 0,
+                        && s.getMonthsSinceActive() == 0,
                         counting()));
         System.out.println("Experienced and Active Students = " +
                 experiencedAndActive.get(true));
@@ -99,7 +98,5 @@ public class MainMapping {
                 .count();
         System.out.println("Active Students in multiLevel = " + count);
 
-
-        // You need fix some errors last four examples :).
     }
 }
